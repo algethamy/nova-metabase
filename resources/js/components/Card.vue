@@ -4,7 +4,7 @@
             :src="iframeUrl"
             frameborder="0"
             width="100%"
-            :height="this.card.iframeHeight"
+            :height="this.iframeHeight"
             allowtransparency
         ></iframe>
     </Card>
