@@ -4,7 +4,7 @@
             :src="iframeUrl"
             frameborder="0"
             width="100%"
-            :height="this.iframeHeight"
+            :height="iframeHeight"
             allowtransparency
         ></iframe>
     </Card>
@@ -17,10 +17,12 @@ export default {
     ],
 
     data: () => ({
-        iframeUrl: ''
+        iframeUrl: '',
+        iframeHeight: ''
     }),
     mounted() {
         this.iframeUrl = this.card.iframeUrl;
+        this.iframeHeight = this.card.iframeHeight;
     },
 }
 </script>
