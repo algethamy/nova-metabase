@@ -1,5 +1,6 @@
 <template>
     <Card class="flex flex-col items-center justify-center">
+      <span v-text="iframeHeight"></span>
         <iframe
             :src="iframeUrl"
             frameborder="0"
