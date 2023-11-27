@@ -20,6 +20,11 @@ class CardServiceProvider extends ServiceProvider
             $this->routes();
         });
 
+        $this->publishes([
+            __DIR__ . '/../config/nova-metabase.php' => config_path('nova-metabase.php'),
+        ], 'nova-metabase-config');
+
+
         Nova::serving(function (ServingNova $event) {
             Nova::script('metabase', __DIR__.'/../dist/js/card.js');
             Nova::style('metabase', __DIR__.'/../dist/css/card.css');
