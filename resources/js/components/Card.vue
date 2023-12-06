@@ -1,11 +1,10 @@
 <template>
     <Card class="flex flex-col items-center justify-center">
-      <span v-text="iframeHeight"></span>
         <iframe
-            :src="iframeUrl"
+            :src="this.card.iframeUrl"
             frameborder="0"
             width="100%"
-            :height="iframeHeight"
+            :height="this.card.iframeHeight"
             allowtransparency
         ></iframe>
     </Card>
@@ -15,15 +14,6 @@
 export default {
     props: [
         'card',
-    ],
-
-    data: () => ({
-        iframeUrl: '',
-        iframeHeight: ''
-    }),
-    mounted() {
-        this.iframeUrl = this.card.iframeUrl;
-        this.iframeHeight = this.card.iframeHeight;
-    },
+    ]
 }
 </script>
