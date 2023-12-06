@@ -1,5 +1,5 @@
 {
-    "name": "ncpd/metabase",
+    "name": "ncpd/nova-metabase",
     "description": "A Laravel Nova card.",
     "keywords": [
         "laravel",
